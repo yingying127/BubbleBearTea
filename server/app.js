@@ -20,5 +20,14 @@ app.get('/api/drinks', async(req, res, next) => {
     }
 })
 
+app.get('/api/toppings', async(req, res, next) => {
+    try {
+        res.status(201).send(await Topping.findAll())
+    }
+    catch(ex) {
+        next(ex)
+    }
+})
+
 
 module.exports = app;
