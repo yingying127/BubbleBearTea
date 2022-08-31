@@ -20,7 +20,7 @@ const App = connect(
     }
 )(class App extends Component {
     async componentDidMount() {
-        this.props.boostrap()
+        this.props.bootstrap()
     }
     render() {
         return (

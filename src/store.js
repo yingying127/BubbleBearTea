@@ -30,7 +30,7 @@ const drinkReducer = (state = [], action) => {
 }
 
 const toppingReducer = (state = [], action) => {
-    if (action.type === LOAD_DRINKS) {
+    if (action.type === LOAD_TOPPINGS) {
         state = action.toppings
     }
     if (action.type === DELETE_TOPPINGS) {
