@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { connect, Provider } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
-
 import store, { loadDrinks, loadToppings } from './store'
-import Nav from './Nav'
-import Drinks from './Drinks'
-import Toppings from './Toppings'
+import Navbar from './components/Navbar'
+import Drinks from './components/Drinks'
+import Toppings from './components/Toppings'
 
 const App = connect(
     state => state,
@@ -27,7 +26,7 @@ const App = connect(
             <Router>
                 <div>
                     <h1>Bubble Bear Tea</h1>
-                    <Route component={Nav} />
+                    <Route component={Navbar} />
 
                 </div>
             </Router>

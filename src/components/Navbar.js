@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Nav = ({ drinks, toppings }) => {
+const Navbar = ({ drinks, toppings }) => {
     return (
         <div>
             <h1>Menu</h1>
@@ -9,4 +9,4 @@ const Nav = ({ drinks, toppings }) => {
     )
 }
 
-export default connect(state => state)(Nav)
+export default connect(state => state)(Navbar)

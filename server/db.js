@@ -16,6 +16,16 @@ const Topping = sequelize.define('topping', {
     }
 })
 
+const Person = sequelize.define('person', {
+    name: {
+        type: Sequelize.STRING
+    },
+    isAdmin: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+    }
+})
+
 const syncAndSeed = async() => {
     await sequelize.sync({ force: true })
 
@@ -58,7 +68,14 @@ const syncAndSeed = async() => {
        Topping.create({ name: 'Mango Popping Boba'}),
        Topping.create({ name: 'Strawberry Popping Boba'}),
        Topping.create({ name: 'Lychee Popping Boba'}),
-       Topping.create({ name: 'Passionfruit Popping Boba'})
+       Topping.create({ name: 'Passionfruit Popping Boba'}),
+
+       Person.create({ name: 'James', isAdmin: true}),
+       Person.create({ name: 'Alec', isAdmin: true}),
+       Person.create({ name: 'Ying', isAdmin: true}),
+       Person.create({ name: 'Customer 1', isAdmin: false}),
+       Person.create({ name: 'Customer 2', isAdmin: false}),
+       Person.create({ name: 'Customer 3', isAdmin: false})
     ])
 }
 
@@ -66,6 +83,7 @@ module.exports = {
     syncAndSeed,
     models: {
         Drink,
-        Topping
+        Topping,
+        Person
     }
 }
