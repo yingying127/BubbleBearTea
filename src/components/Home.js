@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Toppings = ({ toppings }) => {
+const Home = ({}) => {
     return (
         <div>
-            <h2>Toppings</h2>
+            <h2>Home yaaa</h2>
         </div>
     )
 }
 
-export default connect(state => state)(Toppings)
+export default connect(state => state)(Home)

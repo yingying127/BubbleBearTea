@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { connect, Provider } from 'react-redux';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Redirect } from 'react-router-dom';
 import store, { loadDrinks, loadToppings } from './store'
 import Navbar from './components/Navbar'
 import Drinks from './components/Drinks'
-import Toppings from './components/Toppings'
+import Home from './components/Home'
 
 const App = connect(
     state => state,
@@ -24,11 +24,11 @@ const App = connect(
     render() {
         return (
             <Router>
-                <div>
-                    <h1>Bubble Bear Tea</h1>
-                    <Route component={Navbar} />
+                <Route component={Navbar} />
+                <Route path='/home' component={Home} />
+                <Route path='/menu' component={Drinks} />
 
-                </div>
+                <Redirect to='/home' />
             </Router>
         )
     }
