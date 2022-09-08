@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Home = ({}) => {
+const Gallery = ({}) => {
     return (
         <div>
-            <h1>Bubble Bear Tea</h1>
+            <h2>galleryy</h2>
         </div>
     )
 }
 
-export default connect(state => state)(Home)
+export default connect(state => state)(Gallery)

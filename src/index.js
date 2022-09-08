@@ -6,6 +6,8 @@ import store, { loadDrinks, loadToppings } from './store'
 import Navbar from './components/Navbar'
 import Drinks from './components/Drinks'
 import Home from './components/Home'
+import About from './components/About'
+import Gallery from './components/Gallery'
 
 const App = connect(
     state => state,
@@ -27,6 +29,8 @@ const App = connect(
                 <Route component={Navbar} />
                 <Route path='/home' component={Home} />
                 <Route path='/menu' component={Drinks} />
+                <Route path='/about' component={About} />
+                <Route path='/gallery' component={Gallery} />
 
                 <Redirect to='/home' />
             </Router>
