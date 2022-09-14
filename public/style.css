@@ -2,10 +2,114 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Mogena';
+    /* font-family: 'Mogena'; */
 }
 
-nav a, nav li {
-    display: inline-block;
+a {
     text-decoration: none;
+}
+
+/** Navbar **/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 65%, 0.446);
+    font-size: 20px;
+}
+
+.logo {
+    margin-left: 5%;
+    width: 120px;
+    height: auto;
+}
+
+.navbar-main {
+    margin-left: 5%;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-main a:hover {
+    color: gray;
+}
+
+.navbar-main li {
+    display: inline;
+    color: gray;
+    padding: 20px;
+}
+
+.navbar li a {
+    color: black;
+}
+
+/** Bottom Navbar **/
+.bottomnav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
+
+
+
+/** Phone **/
+@media only screen and (max-width : 992px){
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: hsla(0, 0%, 65%, 0.446);
+    font-size: 20px;
+}
+
+.navbar-main{
+    display: none;
+}
+
+.show_nav{
+    padding-top: 2%;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.navbar-main li{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+}
+.navbar_toggle {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30px;
+    color: #ffffff;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    display: block;
+}
+.logo_header{
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 2%;
+}
+
+} 

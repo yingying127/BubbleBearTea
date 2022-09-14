@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ drinks, toppings }) => {
     return (
         <div>
-            <nav>
-                {/* <div>
-                    <Link to="/home"> <img src="../public/images/logo-08.png"/> </Link> 
-                </div> */}
-                <div>
+            <nav className='navbar'>
+                <div className='navbar-logo'>
+                    <Link to="/home"> <img className='logo' src="/images/logo.png"/> </Link> 
+                </div>
+                <div className='navbar-main'>
                     <li><Link to='/home'>Home</Link></li>
-                    <li><Link to='/menu'>Menu</Link></li>
+                    <li><Link to='/drinks'>Drinks</Link></li>
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/gallery'>Gallery</Link></li>
                 </div>
