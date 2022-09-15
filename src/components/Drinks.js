@@ -6,13 +6,13 @@ const Drinks = ({ drinks }) => {
         <div>
             <h2>Drinks</h2>
             <div>
-               {drinks.map(drink => {
-                return (
-                    <p key={ drink.id }>
-                        {drink.name}
-                    </p>
-                )
-               })}
+                
+            </div>
+            <div>
+               <p>Bear Milk Tea</p>
+               <p>Bear Fruit Tea</p>
+               <p>Bear Cap</p>
+               <p>Bear Slush</p>
             </div>
         </div>
     )

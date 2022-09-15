@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ drinks, toppings }) => {
+const Navbar = ({ }) => {
     return (
         <div>
             <nav className='navbar'>
@@ -11,9 +11,9 @@ const Navbar = ({ drinks, toppings }) => {
                 </div>
                 <div className='navbar-main'>
                     <li><Link to='/home'>Home</Link></li>
-                    <li><Link to='/drinks'>Drinks</Link></li>
                     <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/gallery'>Gallery</Link></li>
+                    <li><Link to='/drinks'>Drinks</Link></li>
+                    <li><a href='https://www.grubhub.com/restaurant/bubble-bear-tea-160-walt-whitman-road-1017-huntington-station/4283744'>Order</a></li>
                 </div>
             </nav>
         </div>

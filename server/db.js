@@ -6,7 +6,7 @@ const Drink = sequelize.define('drink', {
         type: Sequelize.STRING
     },
     category: {
-        type: Sequelize.ENUM('milktea', 'fruittea', 'cheesecap', 'slush')
+        type: Sequelize.ENUM('Bear Milk Tea', 'Bear Fruit Tea', 'Bear Cap', 'Bear Slush')
     }
 })
 
@@ -26,38 +26,39 @@ const Person = sequelize.define('person', {
     }
 })
 
+
 const syncAndSeed = async() => {
     await sequelize.sync({ force: true })
-
+ 
     await Promise.all([
-       Drink.create({ name: 'Classic Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Brown Sugar w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Taro Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Matcha Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Thai Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Green Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Oolong Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Wintermelon Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Oreo Milk Tea w/ Boba', category: 'milktea' }),
-       Drink.create({ name: 'Grapefruit Green Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Passionfruit Green Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Mango Green Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Lychee Oolong Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Peach Oolong Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Kumquat Lemon Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Honey Green/Oolong Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Wintermelon Green Tea', category: 'fruittea' }),
-       Drink.create({ name: 'Jasmine Tea w/ Cheese Cap', category: 'cheesecap' }),
-       Drink.create({ name: 'Oolong Tea w/ Cheese Cap', category: 'cheesecap' }),
-       Drink.create({ name: 'Peach Oolong Tea w/ Cheese Cap', category: 'cheesecap' }),
-       Drink.create({ name: 'Mango Tea Slush w/ Cheese Cap', category: 'cheesecap' }),
-       Drink.create({ name: 'Mango Slush', category: 'slush' }),
-       Drink.create({ name: 'Passionfruit Slush', category: 'slush' }),
-       Drink.create({ name: 'Grapefruit Slush', category: 'slush' }),
-       Drink.create({ name: 'Lychee Slush', category: 'slush' }),
-       Drink.create({ name: 'Peach Slush', category: 'slush' }),
-       Drink.create({ name: 'Kumquat Lemon Slush', category: 'slush' }),
-       Drink.create({ name: 'Taro Slush', category: 'slush' }),
+       Drink.create({ name: 'Classic Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Brown Sugar w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Taro Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Matcha Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Thai Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Green Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Oolong Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Wintermelon Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Oreo Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Grapefruit Green Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Passionfruit Green Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Mango Green Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Lychee Oolong Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Peach Oolong Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Kumquat Lemon Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Honey Green/Oolong Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Wintermelon Green Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Jasmine Tea w/ Cheese Cap', category: 'Bear Cap' }),
+       Drink.create({ name: 'Oolong Tea w/ Cheese Cap', category: 'Bear Cap' }),
+       Drink.create({ name: 'Peach Oolong Tea w/ Cheese Cap', category: 'Bear Cap' }),
+       Drink.create({ name: 'Mango Tea Slush w/ Cheese Cap', category: 'Bear Cap' }),
+       Drink.create({ name: 'Mango Slush', category: 'Bear Slush' }),
+       Drink.create({ name: 'Passionfruit Slush', category: 'Bear Slush' }),
+       Drink.create({ name: 'Grapefruit Slush', category: 'Bear Slush' }),
+       Drink.create({ name: 'Lychee Slush', category: 'Bear Slush' }),
+       Drink.create({ name: 'Peach Slush', category: 'Bear Slush' }),
+       Drink.create({ name: 'Kumquat Lemon Slush', category: 'Bear Slush' }),
+       Drink.create({ name: 'Taro Slush', category: 'Bear Slush' }),
 
        Topping.create({ name: 'Boba'}),
        Topping.create({ name: 'Brown Sugar Boba'}),
