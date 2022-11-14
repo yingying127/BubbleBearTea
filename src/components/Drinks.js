@@ -1,9 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Navbar from './Navbar';
 
 const Drinks = ({ drinks }) => {
     return (
         <div>
+            <Navbar />
+            <div className='drinks-banner'></div>
             <h2>Drinks</h2>
             <div>
                 

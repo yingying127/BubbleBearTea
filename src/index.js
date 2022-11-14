@@ -34,7 +34,7 @@ const App = connect(
                 <Route path='/gallery' component={Gallery} />
 
                 <Route component={BottomNavbar} />
-                <Redirect to='/home' />
+                {/* <Redirect to='/home' /> */}
             </Router>
         )
     }
