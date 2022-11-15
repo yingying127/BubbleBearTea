@@ -1,4 +1,4 @@
-const { models: { Drink, Topping, Person } } = require('./db');
+const { models: { Drink, Topping } } = require('./db');
 const express = require('express');
 const app = express();
 const path = require('path')
@@ -30,15 +30,5 @@ app.get('/api/toppings', async(req, res, next) => {
         next(ex)
     }
 })
-
-app.get('/api/person', async(req, res, next) => {
-    try {
-        res.status(201).send(await Person.findAll())
-    }
-    catch(ex) {
-        next(ex)
-    }
-})
-
 
 module.exports = app;

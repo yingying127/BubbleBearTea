@@ -1,41 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Navbar from './Navbar';
+import MilkTea from './Drinks/MilkTea';
+import FruitTea from './Drinks/FruitTea';
+import Matcha from './Drinks/Matcha';
+import Speciality from './Drinks/Speciality';
+import Slush from './Drinks/Slush';
 
-const Drinks = ({ drinks }) => {
+const Drinks = ({}) => {
     return (
         <div>
             <Navbar />
-            <div className='drinks-main'>
+            <div className='drinks-home'>
                 <div className='drinks-banner'></div>
-                <div>
-                    <h1>Bear Milk Tea</h1>
-                    <p className='drinks-individual'>
-                        
-                    </p>
-                </div>
-                <div>
-                    <h1>Bear Fruit Tea</h1>
-                </div>
-                <div>
-                    <h1>Bear Matcha Latte</h1>
-                </div>
-                <div>
-                    <h1>Bear Speciality Drinks</h1>
-                </div>
-                <div>
-                    <h1>Bear Slush</h1>
-                </div>
+                <MilkTea />
+                <FruitTea />
+                <Matcha />
+                <Speciality />
+                <Slush />
             </div>
         </div>
     )
 }
 
-const mapState = (state) => {
-    console.log(state.drinks, 'state')
-    return {
-        drinks: state.drinks
-    }
-}
 
-export default connect(mapState)(Drinks)
+export default connect(state => state)(Drinks)

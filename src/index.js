@@ -28,7 +28,7 @@ const App = connect(
         return (
             <Router>
                 {/* <Route component={Navbar} /> */}
-                <Route path='/home' component={Home} />
+                <Route path='/' exact component={Home} />
                 <Route path='/drinks' component={Drinks} />
                 <Route path='/about' component={About} />
                 <Route path='/gallery' component={Gallery} />

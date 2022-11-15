@@ -6,7 +6,7 @@ const Drink = sequelize.define('drink', {
         type: Sequelize.STRING
     },
     category: {
-        type: Sequelize.ENUM('Bear Milk Tea', 'Bear Fruit Tea', 'Bear Cap', 'Bear Slush')
+        type: Sequelize.ENUM('Bear Milk Tea', 'Bear Fruit Tea', 'Bear Matcha', 'Bear Specialty', 'Bear Slush')
     }
 })
 
@@ -16,17 +16,6 @@ const Topping = sequelize.define('topping', {
     }
 })
 
-const Person = sequelize.define('person', {
-    name: {
-        type: Sequelize.STRING
-    },
-    isAdmin: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false
-    }
-})
-
-
 const syncAndSeed = async() => {
     await sequelize.sync({ force: true })
  
@@ -34,30 +23,31 @@ const syncAndSeed = async() => {
        Drink.create({ name: 'Classic Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
        Drink.create({ name: 'Brown Sugar w/ Boba', category: 'Bear Milk Tea' }),
        Drink.create({ name: 'Taro Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
-       Drink.create({ name: 'Matcha Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
        Drink.create({ name: 'Thai Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
-       Drink.create({ name: 'Green Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Coconut Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Jasmine Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
        Drink.create({ name: 'Oolong Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
-       Drink.create({ name: 'Wintermelon Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
+       Drink.create({ name: 'Winter Melon Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
        Drink.create({ name: 'Oreo Milk Tea w/ Boba', category: 'Bear Milk Tea' }),
        Drink.create({ name: 'Grapefruit Green Tea', category: 'Bear Fruit Tea' }),
        Drink.create({ name: 'Passionfruit Green Tea', category: 'Bear Fruit Tea' }),
        Drink.create({ name: 'Mango Green Tea', category: 'Bear Fruit Tea' }),
        Drink.create({ name: 'Lychee Oolong Tea', category: 'Bear Fruit Tea' }),
        Drink.create({ name: 'Peach Oolong Tea', category: 'Bear Fruit Tea' }),
-       Drink.create({ name: 'Kumquat Lemon Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Kumquat Lychee Green Tea', category: 'Bear Fruit Tea' }),
        Drink.create({ name: 'Honey Green/Oolong Tea', category: 'Bear Fruit Tea' }),
-       Drink.create({ name: 'Wintermelon Green Tea', category: 'Bear Fruit Tea' }),
-       Drink.create({ name: 'Jasmine Tea w/ Cheese Cap', category: 'Bear Cap' }),
-       Drink.create({ name: 'Oolong Tea w/ Cheese Cap', category: 'Bear Cap' }),
-       Drink.create({ name: 'Peach Oolong Tea w/ Cheese Cap', category: 'Bear Cap' }),
-       Drink.create({ name: 'Mango Tea Slush w/ Cheese Cap', category: 'Bear Cap' }),
+       Drink.create({ name: 'Strawberry Green Tea', category: 'Bear Fruit Tea' }),
+       Drink.create({ name: 'Strawberry Matcha Latte w /Boba', category: 'Bear Matcha' }),
+       Drink.create({ name: 'Yuzu Matcha Latte w/ Boba', category: 'Bear Matcha' }),
+       Drink.create({ name: 'Strawberry Milk w/ Boba', category: 'Bear Specialty' }),
+       Drink.create({ name: 'Mango Milk w/ Boba', category: 'Bear Specialty' }),
+       Drink.create({ name: 'Tropical Blend w/ Boba', category: 'Bear Specialty' }),
+       Drink.create({ name: 'Sunset Blast w/ Boba', category: 'Bear Specialty' }),
        Drink.create({ name: 'Mango Slush', category: 'Bear Slush' }),
        Drink.create({ name: 'Passionfruit Slush', category: 'Bear Slush' }),
-       Drink.create({ name: 'Grapefruit Slush', category: 'Bear Slush' }),
        Drink.create({ name: 'Lychee Slush', category: 'Bear Slush' }),
        Drink.create({ name: 'Peach Slush', category: 'Bear Slush' }),
-       Drink.create({ name: 'Kumquat Lemon Slush', category: 'Bear Slush' }),
+       Drink.create({ name: 'Strawberry Slush', category: 'Bear Slush' }),
        Drink.create({ name: 'Taro Slush', category: 'Bear Slush' }),
 
        Topping.create({ name: 'Boba'}),
@@ -65,18 +55,11 @@ const syncAndSeed = async() => {
        Topping.create({ name: 'Crystal Boba'}),
        Topping.create({ name: 'Lychee Jelly'}),
        Topping.create({ name: 'Rainbow Jelly'}),
-       Topping.create({ name: 'Cheese Foam'}),
+       Topping.create({ name: 'Sea Salt Cream'}),
        Topping.create({ name: 'Mango Popping Boba'}),
        Topping.create({ name: 'Strawberry Popping Boba'}),
        Topping.create({ name: 'Lychee Popping Boba'}),
-       Topping.create({ name: 'Passionfruit Popping Boba'}),
-
-       Person.create({ name: 'James', isAdmin: true}),
-       Person.create({ name: 'Alec', isAdmin: true}),
-       Person.create({ name: 'Ying', isAdmin: true}),
-       Person.create({ name: 'Customer 1', isAdmin: false}),
-       Person.create({ name: 'Customer 2', isAdmin: false}),
-       Person.create({ name: 'Customer 3', isAdmin: false})
+       Topping.create({ name: 'Passionfruit Popping Boba'})
     ])
 }
 
@@ -85,6 +68,5 @@ module.exports = {
     models: {
         Drink,
         Topping,
-        Person
     }
 }
