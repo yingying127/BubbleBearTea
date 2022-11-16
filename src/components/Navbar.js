@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ }) => {
+function Navbar() {
+    const [navbar, setNavbar] = useState(false)
+    const [logo, setLogo] = useState(false)
+
+    const changeBackground = () => {
+        if (window.scrollY >= 100) {
+            setNavbar(true)
+        } else {
+            setNavbar(false)
+        }
+    }
+
+    const changeLogo = () => {
+        if (window.scrollY >= 100) {
+            setLogo(true)
+        } else {
+            setLogo(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeBackground);
+    window.addEventListener('scroll', changeLogo)
+
     return (
-        <div>
-            <nav className='navbar'>
+        <div className='navbar-div'>
+            <nav className={navbar ? 'navbar active' : 'navbar'}>
                 <div className='navbar-logo'>
-                    <Link to="/home"> <img className='logo' src="/images/logo.png"/> </Link> 
+                <Link to="/home"> <img className={logo ? 'logo active' : 'logo'} src="/images/logo.png"/> </Link> 
                 </div>
                 <div className='navbar-main'>
                     <li><Link to='/'>Home</Link></li>
