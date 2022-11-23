@@ -35,7 +35,7 @@ function Navbar() {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/drinks'>Drinks</Link></li>
-                    <li><a href='https://www.grubhub.com/restaurant/bubble-bear-tea-160-walt-whitman-road-1017-huntington-station/4283744'>Order</a></li>
+                    <li><a href='https://www.toasttab.com/bubblebear-tea-160-walt-whitman-rd-1017/v3'>Order</a></li>
                 </div>
             </nav>
         </div>

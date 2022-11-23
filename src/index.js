@@ -32,8 +32,11 @@ const App = connect(
                 <Route path='/drinks' component={Drinks} />
                 <Route path='/about' component={About} />
                 <Route path='/gallery' component={Gallery} />
+                <div>
 
-                {/* <Route component={BottomNavbar} /> */}
+                </div>
+                <Route component={BottomNavbar} />
+
                 {/* <Redirect to='/home' /> */}
             </Router>
         )

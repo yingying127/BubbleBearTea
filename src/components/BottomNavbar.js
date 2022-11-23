@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const BottomNavbar = ({}) => {
     return (
         <div className='bottomnav'>
-            <h1>Bottom Nav</h1>
+            <p>© 2022 Bubble Bear Tea USA | All Rights Reserved</p>
         </div>
     )
 }
