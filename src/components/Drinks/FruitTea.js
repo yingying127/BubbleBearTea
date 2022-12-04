@@ -11,6 +11,7 @@ const FruitTea = ({ fruitTea }) => {
                     fruitTea.map(fruit => {
                         return (
                             <li key={fruit.id} className='drink'>
+                                {/* <div className="item-image"><img src={product.imageUrl} /></div> */}
                                 { fruit.name }
                             </li>
                         )
