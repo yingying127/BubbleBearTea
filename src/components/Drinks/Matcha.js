@@ -9,9 +9,14 @@ const Matcha = ({ matcha }) => {
                 {
                     matcha.map(matcha => {
                         return (
-                            <li key={matcha.id} className='drink'>
+                            <div className='drink'>
+                            <li key={matcha.id} className='drinks-image'>
+                                <img src={matcha.imageUrl}/>
+                            </li>
+                            <li key={matcha.id} className='drink-info'>
                                 { matcha.name }
                             </li>
+                            </div>
                         )
                     })
                 }    

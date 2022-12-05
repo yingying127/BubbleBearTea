@@ -9,9 +9,14 @@ const Slush = ({ slush }) => {
                 {
                     slush.map(slush => {
                         return (
-                            <li key={slush.id} className='drink'>
+                            <div className='drink'>
+                            <li key={slush.id} className='drinks-image'>
+                                <img src={slush.imageUrl}/>
+                            </li>
+                            <li key={slush.id} className='drink-info'>
                                 { slush.name }
                             </li>
+                            </div>
                         )
                     })
                 }   

@@ -9,9 +9,14 @@ const MilkTea = ({ milkTea }) => {
                 {
                     milkTea.map(milk => {
                         return (
-                            <li key={milk.id} className='drink'>
+                            <div className='drink'>
+                            <li key={milk.id} className='drinks-image'>
+                                <img src={milk.imageUrl}/>
+                            </li>
+                            <li key={milk.id} className='drink-info'>
                                 { milk.name }
                             </li>
+                            </div>
                         )
                     })
                 }

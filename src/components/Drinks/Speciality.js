@@ -9,9 +9,14 @@ const Speciality = ({ specialty }) => {
                 {
                     specialty.map(specialty => {
                         return (
-                            <li key={specialty.id} className='drink'>
+                            <div className='drink'>
+                            <li key={specialty.id} className='drinks-image'>
+                                <img src={specialty.imageUrl}/>
+                            </li>
+                            <li key={specialty.id} className='drink-info'>
                                 { specialty.name }
                             </li>
+                            </div>
                         )
                     })
                 }   
