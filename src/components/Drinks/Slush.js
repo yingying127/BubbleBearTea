@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const Slush = ({ slush }) => {
     return (
         <div>
-            <h1 className='drinksh1'>Bear Slush Tea</h1>
+            <h1 className='drinksh1'>Bear Slush</h1>
             <div className='drinks-main'>
                 {
                     slush.map(slush => {
