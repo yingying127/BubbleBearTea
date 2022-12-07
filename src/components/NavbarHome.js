@@ -31,7 +31,7 @@ function NavbarHome() {
                 <div className='navbar-logo'>
                 <Link to="/home"> <img className={logo ? 'logo active' : 'logo-home'} src="/images/logo.png"/> </Link> 
                 </div>
-                <div className='navbar-main'>
+                <div className='navbar-main-home'>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/drinks'>Drinks</Link></li>
