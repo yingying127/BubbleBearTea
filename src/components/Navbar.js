@@ -29,7 +29,7 @@ function Navbar() {
         <div className='navbar-div'>
             <nav className={navbar ? 'navbar active' : 'navbar'}>
                 <div className='navbar-logo'>
-                <Link to="/home"> <img className={logo ? 'logo active' : 'logo'} src="/images/logo.png"/> </Link> 
+                <Link to="/"> <img className={logo ? 'logo active' : 'logo'} src="/images/logo.png"/> </Link> 
                 </div>
                 <div className='navbar-main'>
                     <li><Link to='/'>Home</Link></li>
