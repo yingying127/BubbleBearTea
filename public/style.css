@@ -87,13 +87,14 @@ a {
 
 /** Bottom Navbar **/
 .bottomnav {
-    background-color: #fafDe6;
+    background-color: #40544c;
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 60px;
     text-align: center;
-    padding: 10px;
+    padding: 30px;
+    color: white;
   }
 
 /** Home Landing Page **/
@@ -118,6 +119,17 @@ a {
     font-size: 30px;
     text-align: center;
     padding: 5px;
+}
+
+.banner-1, .banner-h, .banner-p {
+    background-color: #40544c;
+    text-align: center;
+    padding: 18px;
+    color: white;
+}
+
+.banner-p {
+    font-style: italic;
 }
 
 /** Navbar in Home **/
