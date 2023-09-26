@@ -41,7 +41,7 @@ a {
     transition: all 0.3s;
 }
 
-.navbar-main {
+.navbar-main, .navbar-main-home {
     margin-left: 5%;
     color: black;
     font-size: 20px;
@@ -50,7 +50,7 @@ a {
     align-items: center;
 }
 
-.navbar-main li {
+.navbar-main li, .navbar-main-home li {
     display: inline;
     color: black;
     padding: 8px;
@@ -79,7 +79,7 @@ a {
     transition: all 0.3s;
 }
 
-.navbar-main li a:hover:before {
+.navbar-main li a:hover:before, .navbar-main-home li a:hover:before {
     height: 100%;
     background: black;
     opacity: 0.1;
@@ -107,6 +107,16 @@ a {
     background-position: right bottom -15px;
 }
 
+.banner2 {
+    width: 100%;
+    height: 70vh;
+    background-image: url("https://i.imgur.com/0I8bNdz.jpeg");
+    background-size: 60%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    transition: all .3s;
+}
+
 .home-h1 {
     color: white;
     font-size: 80px;
@@ -118,7 +128,7 @@ a {
     color: white;
     font-size: 30px;
     text-align: center;
-    padding: 5px;
+    padding: 8px;
 }
 
 .banner-1, .banner-h, .banner-p {
@@ -159,6 +169,17 @@ a {
     color: white;
 }
 
+.navbar-main-home li a:before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: white;
+    transition: all 0.3s;
+}
+
 /** Drinks **/
 .drinks-banner {
     width: 100%;
@@ -183,7 +204,6 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     transition: all 0.3s linear;
-
 }
 
 .drink {
@@ -274,7 +294,7 @@ a {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 30px;
-    color: #ffffff;
+    color: white;
     background: transparent;
     border-color: transparent;
     transition: all 0.3s linear;
